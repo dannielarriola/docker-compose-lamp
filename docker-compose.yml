@@ -15,7 +15,7 @@ services:
     volumes:
       - php:/var/www
     depends_on:
-      - mysql
+      - mariadb
 volumes:
   db:
   php:
