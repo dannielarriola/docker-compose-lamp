@@ -1,9 +1,9 @@
 ### Lamp docker-compose 
 
->Based on official images
->Debian jessie
->php 5.6.29
->mariadb 10.1
+- Based on official images
+- Debian jessie
+- php 5.6.29
+- mariadb 10.1
 
 
 ## How to use
