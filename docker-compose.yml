@@ -1,0 +1,21 @@
+version: '2'
+services:
+  mariadb:
+    build: ./mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - '3306:3306'
+    volumes:
+      - db:/var/lib/mysql
+  php:
+    build: ./php
+    ports:
+      - '80:80'
+    volumes:
+      - php:/var/www
+    depends_on:
+      - mysql
+volumes:
+  db:
+  php:
