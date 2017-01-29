@@ -2,7 +2,7 @@
 
 - Based on official images
 - Debian jessie
-- php 5.6.29
+- php 5.6
 - mariadb 10.1
 
 

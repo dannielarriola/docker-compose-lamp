@@ -6,3 +6,5 @@ RUN apt-get update \
   && docker-php-ext-install soap \
   && docker-php-ext-install intl \
   && docker-php-ext-enable opcache
+RUN mkdir /var/data
+RUN chmod +x /var/data
