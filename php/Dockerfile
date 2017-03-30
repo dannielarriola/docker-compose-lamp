@@ -7,4 +7,4 @@ RUN apt-get update \
   && docker-php-ext-install intl \
   && docker-php-ext-enable opcache
 RUN mkdir /var/data
-RUN chmod +x /var/data
+RUN chmod 777 /var/data
