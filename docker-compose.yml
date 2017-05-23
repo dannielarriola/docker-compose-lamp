@@ -6,6 +6,8 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
     ports:
       - '3306:3306'
+    volumes:
+      - mariadb-volume:/etc/mysql
   php:
     build: ./php
     ports:
@@ -13,5 +15,9 @@ services:
     volumes:
       - ./html:/var/www/html
       - ./data:/var/data
+      - apache-volume:/etc/apache2
     depends_on:
       - mariadb
+volumes:
+  mariadb-volume:
+  apache-volume:
