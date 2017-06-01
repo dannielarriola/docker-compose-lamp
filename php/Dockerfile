@@ -6,8 +6,5 @@ RUN apt-get update \
   && docker-php-ext-install soap \
   && docker-php-ext-install intl \
   && docker-php-ext-enable opcache
-RUN a2enmod rewrite
-RUN service apache2 restart
 RUN mkdir /var/data
 RUN chmod 777 /var/data
-RUN apache2-foreground
